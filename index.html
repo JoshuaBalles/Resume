@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Joshua C. Balles - Resume</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>James Joshua C. Balles</h1>
         <p class="contact-info">
-            <span>29B, The Sentinel Residences, 528 EDSA, Socorro, Quezon City</span>
+            <span>Cubao, Quezon City</span>
             <span class="separator">|</span>
             <a href="https://linkedin.com/in/james-joshua-balles-21a241128" target="_blank">LinkedIn</a>
             <span class="separator">|</span>
@@ -42,20 +43,43 @@
         <!-- Relevant Coursework -->
         <section id="coursework">
             <h2>Relevant Coursework</h2>
-            <ul class="coursework-list">
-                <li><strong>Capstone</strong> — Design of a Deep Learning-Based Multi-Object Weight Estimation for Livestock Management</li>
-                <li><strong>Research Project</strong> — Robotany: A Technological and Interactive Approach for Nurturing House Plant</li>
-                <li><strong>Research Project</strong> — Automating Google Dino Game Using Image Processing</li>
-                <li><strong>Research Project</strong> — Data Analysis of COVID-19</li>
-            </ul>
+            <div class="card-grid">
+                <div class="clickable-card" data-modal="capstone">
+                    <i class="fas fa-brain card-icon"></i>
+                    <h3>Capstone Project</h3>
+                    <p>Deep Learning-Based Multi-Object Weight Estimation for Livestock</p>
+                    <span class="click-hint">Click for details</span>
+                </div>
+                
+                <div class="clickable-card" data-modal="robotany">
+                    <i class="fas fa-seedling card-icon"></i>
+                    <h3>Robotany</h3>
+                    <p>Interactive Approach for Nurturing House Plants</p>
+                    <span class="click-hint">Click for details</span>
+                </div>
+                
+                <div class="clickable-card" data-modal="dino">
+                    <i class="fas fa-gamepad card-icon"></i>
+                    <h3>Google Dino AI</h3>
+                    <p>Automating Dino Game Using Image Processing</p>
+                    <span class="click-hint">Click for details</span>
+                </div>
+                
+                <div class="clickable-card" data-modal="covid">
+                    <i class="fas fa-chart-line card-icon"></i>
+                    <h3>COVID-19 Analysis</h3>
+                    <p>Data Analysis of COVID-19 Trends</p>
+                    <span class="click-hint">Click for details</span>
+                </div>
+            </div>
         </section>
 
         <!-- Certifications -->
         <section id="certifications">
             <h2>Certifications</h2>
             <ul class="cert-list">
-                <li>CISCO Network Academy: Introduction to Networks</li>
-                <li>CISCO Network Academy: IoT Fundamentals - Big Data and Analytics</li>
+                <li><i class="fas fa-certificate"></i> CISCO Network Academy: Introduction to Networks</li>
+                <li><i class="fas fa-certificate"></i> CISCO Network Academy: IoT Fundamentals - Big Data and Analytics</li>
             </ul>
         </section>
 
@@ -63,34 +87,22 @@
         <section id="experience">
             <h2>Professional Experience</h2>
             
-            <div class="entry">
+            <div class="entry clickable-entry" data-modal="tplink">
                 <div class="entry-header">
-                    <h3>Technical Support Specialist</h3>
+                    <h3>Technical Support Specialist <i class="fas fa-external-link-alt"></i></h3>
                     <span class="date">Oct 2024 – Feb 2026</span>
                 </div>
-                <p class="company">TP-Link Customer Services Inc., 3403B 34th One Corp. Centre, J. Vargas Cor., Meralco Ave, Ortigas, Pasig</p>
-                <ul>
-                    <li>Configured and optimized Routers, Access Points, Switches, and Wi-Fi Extenders.</li>
-                    <li>Responded to a daily average of 24 customers and provided remote technical assistance.</li>
-                    <li>Addressed networking issues including Internet Connection Setup, Local IP Addressing, and VPN Client and Server configuration.</li>
-                    <li>Set up and troubleshoot IoT Devices including Wi-Fi Cameras and Hubs, Smart Outlet Plugs and Light Switches, and Robot Vacuums.</li>
-                </ul>
+                <p class="company">TP-Link Customer Services Inc.</p>
+                <p class="preview">Networking & IoT Technical Support • 24+ customers/day</p>
             </div>
 
-            <div class="entry">
+            <div class="entry clickable-entry" data-modal="rgpower">
                 <div class="entry-header">
-                    <h3>Technical Support Intern</h3>
-                    <span class="date">Mar 2024 – May 2024</span>
+                    <h3>Technical Support Intern <i class="fas fa-external-link-alt"></i></h3>
+                    <span class="date">Internship</span>
                 </div>
-                <p class="company">R.G. Power Cleaning Solutions, Inc., Bonifacio Global City, Taguig City</p>
-                <ul>
-                    <li>Designed, developed, and deployed a service booking web application for the company.</li>
-                    <li>Installed, configured, and maintained computer systems and network connections.</li>
-                    <li>Configured hardware, devices, and software to set up workstations for employees.</li>
-                    <li>Reduced workstation downtime by proactively diagnosing hardware and network issues for on-site employees.</li>
-                    <li>Configured and tested new software and hardware.</li>
-                    <li>Responded to customer inquiries and provided technical assistance over phone and in person.</li>
-                </ul>
+                <p class="company">R.G. Power Cleaning Solutions, Inc.</p>
+                <p class="preview">Web Application Development & IT Support</p>
             </div>
         </section>
 
@@ -98,31 +110,52 @@
         <section id="skills">
             <h2>Relevant Skills</h2>
             
-            <div class="skills-category">
-                <h3>Programming Languages</h3>
-                <p>Python, C++</p>
-            </div>
-
-            <div class="skills-category">
-                <h3>Data Analysis</h3>
-                <p>Pandas, NumPy, Seaborn, Matplotlib</p>
-            </div>
-
-            <div class="skills-category">
-                <h3>Machine Learning</h3>
-                <p>Scikit-learn, Keras, TensorFlow, PyTorch</p>
-            </div>
-
-            <div class="skills-category">
-                <h3>Other Software</h3>
-                <p>Microsoft Office Suite, Figma, Android Studio, Visual Studio Code</p>
-            </div>
-
-            <div class="skills-category">
-                <h3>Soft Skills</h3>
-                <p>Fluent in English (B2), Interpersonal, Team Player, Conflict Resolution</p>
+            <div class="card-grid skills-grid">
+                <div class="skill-card" data-modal="skills-python">
+                    <i class="fab fa-python skill-icon"></i>
+                    <h3>Python</h3>
+                    <p>Data Analysis & ML</p>
+                </div>
+                
+                <div class="skill-card" data-modal="skills-cpp">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>C++</h3>
+                    <p>Programming</p>
+                </div>
+                
+                <div class="skill-card" data-modal="skills-ml">
+                    <i class="fas fa-network-wired skill-icon"></i>
+                    <h3>Machine Learning</h3>
+                    <p>TensorFlow, Keras, PyTorch</p>
+                </div>
+                
+                <div class="skill-card" data-modal="skills-data">
+                    <i class="fas fa-table skill-icon"></i>
+                    <h3>Data Analysis</h3>
+                    <p>Pandas, NumPy, Seaborn</p>
+                </div>
             </div>
         </section>
+
+        <!-- Character References -->
+        <section id="references">
+            <h2>Character References</h2>
+            <p class="references-text">Available upon request. Please contact me via email or phone for further details.</p>
+        </section>
     </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card" id="modalCard">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <i class="" id="modalIcon"></i>
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

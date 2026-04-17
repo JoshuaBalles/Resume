@@ -120,72 +120,263 @@ section h2 {
 .company {
     font-style: italic;
     color: #666;
+    margin-bottom: 5px;
+}
+
+.preview {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ===== Clickable Entry ===== */
+.clickable-entry {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #e9ecef;
+}
+
+.clickable-entry:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clickable-entry h3 .fa-external-link-alt {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+.clickable-entry:hover h3 .fa-external-link-alt {
+    color: #2c3e50;
+}
+
+/* ===== Card Grid ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* ===== Clickable Cards ===== */
+.clickable-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.clickable-card .card-icon {
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.entry ul {
-    list-style-type: none;
-    margin-top: 10px;
-}
-
-.entry ul li {
-    position: relative;
-    padding-left: 20px;
+.clickable-card h3 {
+    font-size: 1rem;
     margin-bottom: 8px;
 }
 
-.entry ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
+.clickable-card p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.clickable-card .click-hint {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Skill Cards ===== */
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid #e9ecef;
+}
+
+.skill-card:hover {
+    border-color: #2c3e50;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card .skill-icon {
+    font-size: 2rem;
     color: #2c3e50;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* ===== Coursework ===== */
-.coursework-list,
-.cert-list {
-    list-style-type: none;
-}
-
-.coursework-list li,
-.cert-list li {
-    margin-bottom: 12px;
-    padding-left: 15px;
-    position: relative;
-}
-
-.coursework-list li::before,
-.cert-list li::before {
-    content: "›";
-    position: absolute;
-    left: 0;
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-.coursework-list li strong {
-    color: #333;
-}
-
-/* ===== Skills ===== */
-.skills-category {
-    margin-bottom: 15px;
-}
-
-.skills-category:last-child {
-    margin-bottom: 0;
-}
-
-.skills-category h3 {
+.skill-card h3 {
     font-size: 1rem;
-    font-weight: 600;
     color: #333;
     margin-bottom: 5px;
 }
 
-.skills-category p {
+.skill-card p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* ===== Certifications ===== */
+.cert-list {
+    list-style-type: none;
+}
+
+.cert-list li {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #2c3e50;
+}
+
+.cert-list li i {
+    color: #2c3e50;
+    margin-right: 10px;
+}
+
+/* ===== Character References ===== */
+.references-text {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+/* ===== Modal Overlay ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Modal Card ===== */
+.modal-card {
+    background: white;
+    max-width: 550px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8) translateY(50px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f1f1f1;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.modal-header {
+    padding: 30px 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header i {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.modal-header h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-body h3 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-body h3:first-child {
+    margin-top: 0;
+}
+
+.modal-body p,
+.modal-body li {
     color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
 }
 
 /* ===== Responsive ===== */
@@ -215,5 +406,14 @@ section h2 {
 
     main {
         padding: 25px 15px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-card {
+        width: 95%;
+        max-height: 90vh;
     }
 }
